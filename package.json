@@ -24,6 +24,7 @@
     "@types/ws": "0.0.38",
     "typescript": "^2.1.5",
     "tsify": "^3.0.0",
-    "browserify": "^14.0.0"
+    "browserify": "^14.0.0",
+    "npm-run-all": "^4.0.1"
   }
 }
