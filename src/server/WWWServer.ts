@@ -6,7 +6,7 @@ import * as EJS from "ejs";
 
 import {Test} from "./test";
 
-class WWWServer
+export class WWWServer
 {
     private app : Express.Application;
     private router : Express.Router;
@@ -26,5 +26,3 @@ class WWWServer
         res.render("index");
     }
 }
-
-let server = new WWWServer();
