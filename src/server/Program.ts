@@ -7,3 +7,5 @@ class Program
         let server = new WWWServer();
     }
 }
+
+Program.Main();
