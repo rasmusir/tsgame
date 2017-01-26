@@ -5,8 +5,9 @@
   "main": "build/server/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:server": "tsc src/server/main.ts --noImplicitAny --outDir build/server",
-    "build:client": "browserify main.ts -p [ tsify --noImplicitAny -t ES6] > bundle.js",
+    "build": "npm-run-all build:*",
+    "build:server": "tsc src/server/Program.ts --noImplicitAny --outDir build/server",
+    "build:client": "browserify src/client/Program.ts -p [ tsify --noImplicitAny -t ES6] > build/client/bundle.js",
     "watch": "nodemon --watch"
   },
   "author": "Rasmus Israelsson",

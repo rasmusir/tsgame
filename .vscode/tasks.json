@@ -8,9 +8,17 @@
     "suppressTaskName": true,
     "tasks": [
         {
-            "taskName": "build",
+            "taskName": "build server",
             "args": ["run", "build:server"],
             "problemMatcher": "$tsc"
+        },
+        {
+            "taskName": "build client",
+            "args": ["run", "build:client"]
+        },
+        {
+            "taskName": "build",
+            "args": ["run", "build"]
         }
     ]
 }
