@@ -8,12 +8,12 @@ class Game implements Networking.INetworkHandler
         this.connection = new Networking.Connection();
     }
 
-    onConnect()
+    OnConnect()
     {
         console.log("Connected!");
     }
 
-    onMessage(data : Networking.Message)
+    OnMessage(data : Networking.Message)
     {
 
     }

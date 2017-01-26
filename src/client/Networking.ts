@@ -11,15 +11,15 @@ export class Connection
 
     private onOpen(event : Event) : void
     {
-        if (this.handler !== null) this.handler.onConnect();
-        this.ws.onmessage = event => this.handler.onMessage({data: event.data});
+        if (this.handler !== null) this.handler.OnConnect();
+        this.ws.onmessage = event => this.handler.OnMessage({data: event.data});
     }
 }
 
 export interface INetworkHandler
 {
-    onConnect() : void;
-    onMessage(data : Message) : void;
+    OnConnect() : void;
+    OnMessage(data : Message) : void;
 }
 
 export interface Message
