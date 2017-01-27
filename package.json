@@ -8,7 +8,7 @@
     "build": "npm-run-all build:*",
     "build:server": "tsc src/server/Program.ts --noImplicitAny --outDir build/server",
     "build:client": "browserify src/client/Program.ts --debug -p [ tsify --noImplicitAny -t ES6] | exorcist content/client/bundle.js.map > content/client/bundle.js",
-    "watch": "nodemon --watch"
+    "watch": "nodemon --delay 1 --watch"
   },
   "author": "Rasmus Israelsson",
   "license": "ISC",
