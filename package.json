@@ -2,12 +2,12 @@
   "name": "tsgame",
   "version": "1.0.0",
   "description": "a game built with typescript",
-  "main": "build/server/main.js",
+  "main": "build/server/Program.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm-run-all build:*",
     "build:server": "tsc src/server/Program.ts --noImplicitAny --outDir build/server",
-    "build:client": "browserify src/client/Program.ts -p [ tsify --noImplicitAny -t ES6] > content/client/bundle.js",
+    "build:client": "browserify src/client/Program.ts --debug -p [ tsify --noImplicitAny -t ES6] | exorcist content/client/bundle.js.map > content/client/bundle.js",
     "watch": "nodemon --watch"
   },
   "author": "Rasmus Israelsson",
@@ -22,9 +22,10 @@
     "@types/express": "^4.0.35",
     "@types/node": "^7.0.4",
     "@types/ws": "0.0.38",
-    "typescript": "^2.1.5",
-    "tsify": "^3.0.0",
     "browserify": "^14.0.0",
-    "npm-run-all": "^4.0.1"
+    "exorcist": "^0.4.0",
+    "npm-run-all": "^4.0.1",
+    "tsify": "^3.0.0",
+    "typescript": "^2.1.5"
   }
 }
