@@ -1,6 +1,6 @@
 import * as Networking from "./Networking";
 
-class Game implements Networking.INetworkHandler
+export class Game implements Networking.INetworkHandler
 {
     private connection : Networking.Connection
     constructor()
