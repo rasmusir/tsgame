@@ -7,9 +7,9 @@ const RandToken = require("rand-token");
 export class GameObject
 {
     private id : string
-    constructor()
+    constructor(id? : string)
     {
-        this.id = RandToken.generate(5);
+        this.id = id || RandToken.generate(5);
         console.log(this.id);
     }
 
