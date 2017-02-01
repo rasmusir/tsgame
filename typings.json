@@ -3,7 +3,6 @@
     "socket.io": "registry:dt/socket.io#1.4.4+20160915014424"
   },
   "globalDevDependencies": {
-    "exorcist": "registry:dt/exorcist#0.4.0+20161121205806",
     "three": "registry:dt/three#0.83.0+20170124181513"
   }
 }

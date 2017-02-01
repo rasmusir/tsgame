@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm-run-all build:*",
     "build:server": "tsc -p tsconfig.server.json",
-    "build:client": "browserify src/client/Program.ts --debug -p [ tsify ] | exorcist content/client/bundle.js.map > content/client/bundle.js",
+    "build:client": "browserify src/client/Program.ts --debug -p [ tsify ] > content/client/bundle.js",
     "watch": "nodemon --delay 1 --watch"
   },
   "author": "Rasmus Israelsson",
@@ -20,11 +20,11 @@
     "ws": "^1.1.1"
   },
   "devDependencies": {
+    "@types/ejs": "^2.3.33",
     "@types/express": "^4.0.35",
     "@types/node": "^7.0.4",
     "@types/ws": "0.0.38",
     "browserify": "^14.0.0",
-    "exorcist": "^0.4.0",
     "npm-run-all": "^4.0.1",
     "rand-token": "^0.3.0",
     "three": "^0.84.0",
