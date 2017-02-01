@@ -1,5 +1,5 @@
 node_modules/*
 build/*
-content/client/*
+content/bundle.js
 npm-debug*
 typings/*
