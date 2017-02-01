@@ -3,8 +3,6 @@ import * as Express from "express";
 import * as Http from "http";
 import * as EJS from "ejs";
 
-import {Test} from "./test";
-
 export class WWWServer
 {
     private app : Express.Application;
