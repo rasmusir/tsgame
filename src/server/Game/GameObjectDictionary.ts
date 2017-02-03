@@ -28,8 +28,8 @@ export class GameObjectDictionary
         return this.dictionary.get(id);
     }
 
-    public ForEach(func : ForEachCallback)
+    public ForEach(callback : (object : GameObject) => void) : void
     {
-        this.dictionary.forEach(func);
+        this.dictionary.forEach(object => callback(object));
     }
 }
