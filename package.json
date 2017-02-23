@@ -9,6 +9,7 @@
     "build": "npm-run-all build:*",
     "build:server": "tsc -p tsconfig.server.json",
     "build:client": "browserify src/client/Program.ts --debug -p [ tsify ] > content/bundle.js",
+    "watch:build": "watchify src/client/Program.ts --debug -p [ tsify ] -o content/bundle.js",
     "watch": "nodemon --delay 1 --watch"
   },
   "author": "Rasmus Israelsson",
@@ -17,19 +18,19 @@
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.1",
     "socket.io": "^1.7.2",
+    "watchify": "^3.9.0",
     "ws": "^1.1.1"
   },
   "devDependencies": {
     "@types/ejs": "^2.3.33",
     "@types/express": "^4.0.35",
     "@types/node": "^7.0.4",
-    "@types/three": "^0.83.1",
     "@types/ws": "0.0.38",
     "browserify": "^14.0.0",
     "npm-run-all": "^4.0.1",
     "rand-token": "^0.3.0",
-    "three": "^0.84.0",
     "tsify": "^3.0.0",
     "typescript": "^2.1.5"
   }

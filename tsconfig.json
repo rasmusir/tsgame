@@ -3,7 +3,8 @@
       "module": "commonjs",
       "moduleResolution": "node",
       "target": "ES6",
-      "noImplicitAny": true
+      "noImplicitAny": true,
+      "skipLibCheck": true
     },
     "exclude": [
       "node_modules"

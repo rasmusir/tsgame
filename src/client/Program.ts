@@ -5,10 +5,8 @@ class Program
 
     public static Main() : void
     {
-        let game = new Game();
-        document.body.appendChild(game.GetWebGLElement());
-        game.SetResolution(window.innerWidth, window.innerHeight);
-        window.addEventListener("resize", () => game.SetResolution(window.innerWidth, window.innerHeight));
+        let game = new Game(document.querySelector("#canvas") as HTMLCanvasElement);
+        window.addEventListener("resize", () => game.Resize());
         game.Start();
     }
 }
